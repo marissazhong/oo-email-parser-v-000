@@ -12,7 +12,7 @@ class EmailParser
   def parse
     parsed = @emails.split(/[, ]/).map(&:strip)
     parsed = parsed.reject {|email| email.empty?}
-    parsed = parsed.unique
+    parsed = parsed.uniq
   end
 
 end
